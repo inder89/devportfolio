@@ -1,11 +1,4 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
-
+/*!  
     Description: This file contains all the styles associated with the page
     that don't come from third party libraries. This file gets compiled using
     Gulp and send to the /css folder which is then loaded on the page.
@@ -20,8 +13,6 @@
         5. About Styles
         6. Experience Styles
         7. Education Styles
-        8. Project Styles
-        9. Skills Styles
         10. Contact Styles
         11. Optional Section Styles
         12. Media Queries
@@ -34,20 +25,26 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
-
+$base-color: #020534;
+$base-color-hover: darken($base-color, 30%);
+ 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$background: #f5efe3;
+$background-alt: #f5efe3;
 
 // Define border colors
-$border: #dcd9d9;
+$border: #020534;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #020534;
+$text: #020334;
 
+/* color pallete
+#f5efe3
+#e6e7e5
+#f7d3ba
+#a6aa9c
+*/
 /*
     ---------------------
     ----- 2. Mixins -----
@@ -114,7 +111,7 @@ body {
             h4 {
                 font-size: 1.2em;
                 font-weight: 300;
-                color: #7e8890;
+                color: $heading;
                 margin: 0 0 15px 0;
             }
 
@@ -154,7 +151,7 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: #fff;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -168,13 +165,13 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: #020036;
         padding: 10px;
 
         &:hover {
-            color: $base-color-hover;
+            color: #000;
             text-decoration: none;
-            background: #eee;
+            background: floralwhite;
             border-radius: 4px;
         }
 
@@ -283,7 +280,7 @@ footer {
 
     a {
         display: block;
-        color: $text;
+        color: gray;
         padding: 10px;
 
         &:hover {
@@ -294,9 +291,9 @@ footer {
 
 .btn-rounded-white {
     display: inline-block;
-    color: #fff;
+    color: $base-color;
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid $base-color;
     border-radius: 30px;
     @include transition();
 
@@ -369,7 +366,7 @@ footer {
     }
 
     h1 {
-        color: #fff;
+        color: $base-color;
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
@@ -378,7 +375,7 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: lighten($base-color, 5%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -393,7 +390,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($background, 0.8);
     z-index: 1;
 }
 
@@ -405,7 +402,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff;
+    color: $base-color;
 
     span {
         cursor: pointer;
@@ -414,7 +411,7 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid lighten($base-color, 5%);
         text-align:center;
     }
 
@@ -538,7 +535,6 @@ footer {
 .vtimeline-point {
     position: relative;
     display: block;
-    vertical-align: top;
     margin-bottom: 30px;
 }
 
@@ -652,6 +648,13 @@ footer {
 
 .project-image {
     float: left;
+
+	img {
+		max-width: 300px;
+		float: left;
+		
+
+	}
 }
 
 .project-info {
@@ -735,7 +738,7 @@ footer {
 
     h2 {
         margin: 0 0 15px 0;
-        color: #fff;
+        color: $background;
         font-weight: 500;
     }
 }
@@ -751,16 +754,16 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
-        color: #fff;
+        background: $background;
+        color: $base-color;
         @include transition();
         @include placeholder {
-            color: #fff;
+            color: $base-color;
         }
 
         &:focus {
             outline: none;
-            background: darken($base-color, 25%);
+            background: #fffffe;
         }
     }
 
@@ -772,7 +775,7 @@ footer {
     button {
         display: block;
         width: 100%;
-        background: #fff;
+        background: $background;
         border-radius: 4px;
         padding: 5px 10px;
         border: none;
@@ -783,6 +786,7 @@ footer {
 
         &:hover {
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            background: #fffffe;
         }
     }
 }
