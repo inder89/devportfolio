@@ -25,15 +25,9 @@
 */
 
 // Define base and accent colors
-<<<<<<< HEAD
 $base-color: #020534;
 $base-color-hover: darken($base-color, 30%);
  
-=======
-$base-color: #F3F4ED;
-$base-color-hover: darken($base-color, 10%);
-
->>>>>>> 9f7999a2accbd8ab09603c7fb56e98c8c7c253c7
 // Define background colors
 $background: #f5efe3;
 $background-alt: #f5efe3;
@@ -632,6 +626,17 @@ footer {
     -------------------------------
 */
 
+#projects {
+    padding: 50px 15px;
+    border-bottom: 1px solid $border;
+    text-align: center;
+
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
+}
+
 .project {
     position: relative;
     max-width: 900px;
@@ -639,8 +644,8 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+}
 
-<<<<<<< HEAD
 .project-image {
     float: left;
 
@@ -650,18 +655,6 @@ footer {
 		
 
 	}
-=======
-    .project-image {
-        float: left;
-
-        img{
-            float: left;
-            max-width: 300px;
-            margin-right:2rem;
-        }
-
-    } 
->>>>>>> 9f7999a2accbd8ab09603c7fb56e98c8c7c253c7
 }
 
 .project-info {
